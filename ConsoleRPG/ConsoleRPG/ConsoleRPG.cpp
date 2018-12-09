@@ -2,23 +2,45 @@
 #include <iostream>
 #include <Windows.h>
 #include <string>
+#include <fstream>
 
-//Stcructure shuldn't be in main??????
 struct NPC
 {
 	std::string name;
 	int height, width, weight, race, age, positionX, positionY;
+	int inventory[10];
+	bool is_enemy;
 
+};
+
+struct Item
+{
+	std::string name;
+	int ID;
 };
 
 //testing function (my favourite)
 void testing() {
 	system("cls");
-	
-	
-	
+
 }
 
+//It's returning name of item
+std::string	getting_name_by_id(){
+	//opening file with item name
+	std::string file_name = "Drop_Name_By_ID.txt";
+	std::fstream file;
+	file.open(file_name.c_str());
+
+	//here logic (TO DO!!!!!!) (becouse I need enemy first)
+	return 0;
+}
+
+//droping function
+void drop() {
+
+
+}
 
 //Working pattern for creating 23x79 plane to walk on.
 void map_creator(bool map_to_walk_on[23][79], char map_drawing[23][79]) {
@@ -57,8 +79,8 @@ void Game_loop(bool map_to_walk_on[23][79], char map_drawing[23][79]) {
 	std::string what_you_are_going_to_do;
 	bool exit = true;
 	struct NPC player;
-	player.positionX = 1;
-	player.positionY = 1;
+	player.positionX = 39;
+	player.positionY = 10;
 	map_creator(map_to_walk_on, map_drawing);
 
 	do{
@@ -98,40 +120,9 @@ void Game_loop(bool map_to_walk_on[23][79], char map_drawing[23][79]) {
 	} while (exit);
 }
 
-//Here should be main loop of the game, but insted I created butload of code typing words. (for later use mabye)
-//*************************************************************************************************************************************************************************
-void game_start() {
-	system("cls");
-	struct NPC player;
-
-	//Just text shit for fun. I'm going to replace this.
-	std::cout << "<Lady> Hello participants." << std::endl; Sleep(3000);
-	std::cout << "<Lady> Time have come for another of you to join oure &%$^&#322" << std::endl; Sleep(5000);
-	std::cout << "<Lady> Ok, you are next to see prof. OAK. Please tell us youre name" << std::endl;
-	std::cout << "<YOU>"; std::cin >> player.name;
-	std::cin.get(); system("cls");
-	std::cout << "<Prof. OAK> Ohhh.... "; Sleep(2000); std::cout << player.name << " was it?"; Sleep(2000); std::cout <<" Yes, now I remember." << std::endl; std::cin.get();
-	std::cout << "<Prof. OAK> WAIT!!!!"; Sleep(1000); std::cout << "\n\n ^ The hell is this!? \n | \n" << std::endl; Sleep(2000); std::cout << "SOMEONE IS GOING TO LOSE HIS HEAD. MY NAME IS JOHN !!!!" << std::endl; std::cin.get();
-	system("cls");
-	std::cout << "<JOHN> FINALY! \n<JOHN> All right I'm here to introduce you to all of the mechanics in this $#522$#%#"; std::cin.get();
-	system("cls"); std::cout << "INTRODUCING 0%"; Sleep(2000);
-	system("cls"); std::cout << "INTRODUCING 20%"; Sleep(2000);
-	system("cls"); std::cout << "INTRODUCING 40%"; Sleep(2000);
-	system("cls"); std::cout << "INTRODUCING 60%"; Sleep(2000);
-	system("cls"); std::cout << "INTRODUCING 80%"; Sleep(2000);
-	system("cls"); std::cout << "INTRODUCING 81%"; Sleep(2000);
-	system("cls"); std::cout << "INTRODUCING 82%"; Sleep(2000);
-	system("cls"); std::cout << "INTRODUCING 83%"; Sleep(2000);
-	system("cls"); std::cout << "INTRODUCING 83% (Becouse of windows :P)"; Sleep(2000);
-	system("cls"); std::cout << "INTRODUCING 90%"; Sleep(2000);
-	system("cls"); std::cout << "INTRODUCING 99%"; Sleep(2000);
-	system("cls"); std::cout << "INTRODUCING NAN%"; Sleep(5000);
-	system("cls"); std::cout << "Ok. Just kidding. Go play game :P";
-}
-//*************************************************************************************************************************************************************************
-
-void main()
+int main()
 {
+	system("cls");
 	int choise;
 	bool map_to_walk_on[23][79];
 	char map_drawing[23][79];
@@ -145,9 +136,9 @@ void main()
 	{
 	case 1: Game_loop(map_to_walk_on, map_drawing);
 		break;
-	case 2: std::cout << "Still working on it" <<std::endl;
+	case 2: std::cout << "Still working on it" << std::endl; Sleep(1000); main();
 		break;
-	case 3: std::cout << "Still working on it" << std::endl;
+	case 3: std::cout << "Still working on it" << std::endl; Sleep(1000); main();
 		break;
 	case 4: std::cout << "Bye." << std::endl;
 		break;
@@ -156,4 +147,5 @@ void main()
 	default: std::cout << "Beeep.... "; Sleep(900); std::cout << "beep...."; Sleep(900); std::cout <<" boop...." << std::endl; Sleep(2000); std::cout << "Shuting down" << std::endl;
 		break;
 	}
+	return 0;
 }
