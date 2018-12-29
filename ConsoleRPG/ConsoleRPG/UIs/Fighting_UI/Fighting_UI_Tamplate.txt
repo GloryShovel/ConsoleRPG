@@ -1,0 +1,30 @@
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+                                                                              |
+______________________________________________________________________________|
+
+This is tamplate for fighting UI.
+
+INSTRUCTION:
+1.UI will be displayed on top of picture so be carefull (try to leave middle for picture)
+
+
+Have fun.

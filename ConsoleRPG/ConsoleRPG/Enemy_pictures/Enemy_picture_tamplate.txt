@@ -1,0 +1,32 @@
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                            |
+____________________________________________________________________________|
+
+This is tamplate for pictures of enemies.
+
+INSTRUCTION:
+1.Everything you want to display goes into the box
+2.You can only use ASCII unicode (I will make support for other unicodes later)
+3.Every picture have to have race and ID (ID is based on each race so it will be added by game creator[me]. )
+4.Some parts of picture can be hidden becouse of UI so be carefull where you put every sign.
+
+Have fun.
